@@ -1,0 +1,19 @@
+spring:
+  h2.console:
+    enabled: true
+    path: '/console'
+  datasource:
+    url: 'jdbc:h2:file:C:/Users/ABC TM MK/Desktop/programy/kurs_spring/todo-app/todo-db'
+  jpa:
+    hibernate:
+      ddl-auto: validate
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+keycloak:
+  auth-server-url: 'http://localhost:8180/auth'
+  realm: 'TodoApp'
+  resource: 'todo-spring-client'
+  public-client: true
